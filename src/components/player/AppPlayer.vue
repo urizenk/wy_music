@@ -10,7 +10,7 @@
 -->
 <template>
   <div class="app-player">
-    <div class="progess">
+    <div class="progress">
         <div class="time">00:00</div>
         <div class="progress-bar">
             <div class="progress-bar-inner"></div>
@@ -54,6 +54,9 @@ export default {
     justify-content: space-around;
     align-items: center;
     border-top: 1px solid #ccc;
+    .progress{
+        
+    }
     .icon{
         background-color: white;
         justify-content: space-around;

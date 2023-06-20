@@ -2,6 +2,9 @@
     <div class="item-music">
         <music-item :playlist="state.playlist"></music-item>
         <item-list :playlist="state.playlist"></item-list>
+        <music-player />
+        <app-footer /><music-player />
+        <app-footer />
     </div>
 </template>
 

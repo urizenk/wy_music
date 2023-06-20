@@ -1,6 +1,9 @@
 <template>
   <div class="juke-box">
-    能旋转的唱片机
+    <div class="turntable">
+      <div class="record"></div>
+      <div class="needle"></div>
+    </div>
   </div>
 </template>
 
@@ -11,21 +14,42 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.juke-box{
-    position: fixed;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: rgb(255, 255, 255);
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    .icon{
-        background-color: red;
-        justify-content: space-around;
-        width: 1rem;
-        height: 1rem;
+
+@turntable-color: #f1f1f1;
+@record-color: #000;
+@needle-color: #000;
+
+.juke-box {
+  width: 300px;
+  text-align: center;
+
+  .turntable {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: @turntable-color;
+
+    .record {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 160px;
+      height: 160px;
+      background-color: @record-color;
+      border-radius: 50%;
     }
+
+    .needle {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 80px;
+      background-color: @needle-color;
+    }
+  }
 }
 </style>
